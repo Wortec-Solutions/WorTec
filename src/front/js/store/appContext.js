@@ -29,14 +29,8 @@ const injectContext = PassedComponent => {
 			 * store, instead use actions, like this:
 			 **/
 			
-			state.store.user
-			state.actions.getMessage(); // <---- calling this function from the flux.js actions
-			state.store.token
-			state.actions.rechargeToken()
-			// if(state.store.user.role === 'teacher'){
-			// 	state.actions.getTeachersStudents(state.store.user.id)
-				
-			// }
+			
+			
 			
 		}, [state.store.user]);
 

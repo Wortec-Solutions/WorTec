@@ -1,8 +1,6 @@
 import React, { useRef, useEffect, useState, useContext } from 'react';
 import { Context } from "../store/appContext";
 import { useNavigate } from 'react-router-dom';
-
-import LogoFox from '../../img/FoxIcon.png';
 import { BsArrowLeftShort, BsChevronDown, BsArrowUpSquareFill } from 'react-icons/bs';
 import { AiFillEnvironment, AiOutlineUser, AiOutlineProject } from 'react-icons/ai';
 import { RiDashboardFill, RiLogoutCircleLine } from 'react-icons/ri';

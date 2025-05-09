@@ -1,83 +1,204 @@
+# 🚀 WebApp Boilerplate with React JS and Flask API – by Wortec
 
-
-
-# CodeMind Plataforma de Aprendizaje
-
-![LOGO](https://github.com/4GeeksAcademy/codemind/assets/83560861/d2c8e8df-cd89-4529-bf01-aaa0a61ee2ff)
-
-¡Bienvenido/a a la Plataforma de Aprendizaje CodeMind! Esta plataforma ha sido diseñada tanto para administradores como para estudiantes, brindando un entorno interactivo y educativo para mejorar tus habilidades en programación y convertirte en un desarrollador fullstack.
-
-
-
-## Descripción del Proyecto
-
-CodeMind es una plataforma de aprendizaje diseñada para empoderar a los estudiantes en su viaje para convertirse en desarrolladores fullstack. Ya sea que estés dando tus primeros pasos en la programación o buscando mejorar tus habilidades existentes, CodeMind te ofrece una variedad de recursos y ejercicios para estimular tu conocimiento y creatividad.
-
-
-## Nuestras características clave incluyen:
-
-- **Registro de Usuarios:** Los administradores pueden gestionar usuarios, mientras que los estudiantes pueden registrarse en la plataforma.
-
-- **Ruta de Aprendizaje:** Los estudiantes tienen acceso a una guía de módulos de práctica para avanzar en su camino para convertirse en desarrolladores fullstack.
-
-- **Aviso de Ejercicios:** Después de cada módulo, se proporciona un ejercicio recomendado para practicar.
-
-- **Identificador de Progreso:** Los estudiantes pueden realizar un seguimiento de su progreso en los ejercicios.
-
-- **Diversidad de Ejercicios:** Los ejercicios incluyen cuestionarios, proyectos y desafíos para estimular la creatividad y el conocimiento.
-
-- **Recursos Adicionales:** Los estudiantes tienen acceso a enlaces y documentos extra para resolver dudas.
-
-- **Contenidos de Aprendizaje:** Se proporcionan recursos educativos sobre diversos tópicos de programación.
-
-- **Gestión de Usuarios:** Los administradores pueden eliminar usuarios en caso de comportamiento indebido.
-
-- **Autenticación Segura:** Los usuarios pueden iniciar sesión de manera segura en sus cuentas de CodeMind.
-
-- **Cambio y Olvido de Contraseña:** Los usuarios pueden cambiar su contraseña y recuperarla en caso de olvido.
-
-- **Cerrar Sesión:** Los usuarios pueden cerrar sesión para proteger su privacidad y seguridad.
-
-
-## Configuración
-
-- Consulta los archivos README  para obtener detalles sobre la configuración específica.
-
-## Contribución
-
-Si deseas contribuir a este proyecto, ¡estamos emocionados por tener tu ayuda! Por favor, sigue estas pautas para contribuir:
-
-1. Haz un fork de este repositorio.
-2. Crea una rama para tu función o corrección: `git checkout -b nueva-funcion`.
-3. Realiza los cambios necesarios y realiza commit: `git commit -m "Agrega nueva función"`.
-4. Envía tus cambios a tu repositorio en GitHub: `git push origin nueva-funcion`.
-5. Crea una Pull Request en este repositorio para que podamos revisar tus cambios.
-
-##Figma
-[Figma](https://www.figma.com/file/g48LF56UejAo4uYpuIMUgV/Untitled?type=design&node-id=0-1&mode=design&t=BDpkpQblPD672V5q-0
-)
-## Contacto
-
-Si tienes preguntas o comentarios sobre la plataforma, no dudes en contactarnos.
+Construye aplicaciones web modernas usando **React.js** para el frontend y **Python/Flask** para tu backend API, con integración lista para bases de datos, migraciones, despliegue y más.
 
 ---
 
-¡Esperamos que disfrutes utilizando CodeMind para mejorar tus habilidades de programación! ¡Feliz aprendizaje!
+## 🧱 Stack de Tecnologías
 
+### 🔹 Frontend
+- **React.js** – Framework para interfaces interactivas.
+- **Tailwind CSS** – Framework de utilidades CSS.
+- **JavaScript (ES6+)** – Lenguaje para desarrollo frontend.
 
-
-
-
-
-
-
-
-
-
-
-
+### 🔹 Backend
+- **Python 3.8+**
+- **Flask** – Microframework para APIs.
+- **Pipenv** – Para la gestión de entornos virtuales y dependencias.
+- **SQLAlchemy** – ORM para manejar bases de datos.
+- **Alembic** – Migraciones para SQLAlchemy.
+- **PostgreSQL** – Motor de base de datos recomendado.
 
 ------------------------------------------------
+
+# **Pasos para Iniciar el Proyecto**
+
+---
+
+### **1. Instalar Dependencias**
+
+- **Abre una terminal** en tu entorno de desarrollo (Codespaces o tu terminal local).
+- **Instala las dependencias del backend** con `pipenv`:
+
+    ```bash
+    pipenv install
+    ```
+
+- **Instala las dependencias del frontend** con `npm`:
+
+    ```bash
+    npm install
+    ```
+
+---
+
+### **2. Convertir Puertos a Públicos**
+
+- **Abre la terminal** si aún no lo has hecho.
+- **Convierte los puertos a públicos** para asegurar que las aplicaciones sean accesibles desde el exterior.  
+  Los puertos públicos se muestran en la terminal bajo la sección "ports" o "puertos".
+
+> ⚠️ Nota: Recuerda que los puertos se convierten a privados si se reinicia la ventana de Codespace. Debes realizar esta conversión cada vez que reinicies la ventana.
+
+---
+
+### **3. Copiar las Rutas en el Archivo `.env`**
+
+- **Accede a las rutas de los puertos** que se muestran en la terminal.  
+  Por lo general, encontrarás las rutas en la sección "ports" de la terminal.
+- **Abre o crea el archivo `.env`** en la raíz de tu proyecto.
+- **Configura las variables de entorno** en el archivo `.env` con las siguientes rutas:
+
+    ```env
+    BACKEND_URL=http://localhost:3001
+    FRONTEND_URL=http://localhost:3000
+    ```
+
+> Ajusta los puertos según lo que se muestre en la terminal.
+
+---
+
+### **4. Iniciar las Aplicaciones**
+
+- **Inicia el backend** utilizando `pipenv`:
+
+    ```bash
+    pipenv run start
+    ```
+
+- **Inicia el frontend** utilizando `npm`:
+
+    ```bash
+    npm run start
+    ```
+
+---
+
+### ✅ **Resumen**
+
+1. **Instalar Dependencias**:
+    - `pipenv install` para el backend.
+    - `npm install` para el frontend.
+2. **Convertir Puertos a Públicos**:
+    - Verificar y convertir los puertos en la terminal.
+3. **Copiar Rutas en el Archivo `.env`**:
+    - Configurar `BACKEND_URL` y `FRONTEND_URL` con los puertos correspondientes.
+4. **Iniciar Aplicaciones**:
+    - `pipenv run start` para el backend.
+    - `npm run start` para el frontend.
+
+---
+
+¡Tu proyecto estará listo para usarse una vez sigas estos pasos! 🚀
+
+
+
+### **Ejecutar Migraciones**
+
+Antes de iniciar el backend por primera vez, debes asegurarte de que la base de datos esté configurada correctamente.
+
+1. Establece la variable `DATABASE_URL` según tu base de datos:
+
+| Motor      | DATABASE_URL                                        |
+|------------|-----------------------------------------------------|
+| SQLite     | sqlite:///./test.db                                 |
+| MySQL      | mysql://username:password@localhost:3306/example    |
+| PostgreSQL | postgres://username:password@localhost:5432/example |
+
+> En Codespaces con PostgreSQL puedes conectarte con:  
+> `psql -h localhost -U gitpod example`
+
+2. Crea los archivos de migración (si hiciste cambios en `models.py`):
+
+    ```bash
+    pipenv run migrate
+    ```
+
+3. Aplica las migraciones:
+
+    ```bash
+    pipenv run upgrade
+    ```
+
+---
+
+### **5. Reiniciar las Aplicaciones**
+
+Cada vez que se modifican los modelos hay que reiniciar las aplicaciones, para parar cada una hay que colocarse en la terminal y presiona ctrl + C, luego:
+
+- **Inicia el backend** utilizando `pipenv`:
+
+    ```bash
+    pipenv run start
+    ```
+
+- **Inicia el frontend** utilizando `npm`:
+
+    ```bash
+    npm run start
+    ```
+
+**Extra (Precaución). Resetear la Base de Datos**
+En caso de errores graves o si deseas reiniciar el entorno de desarrollo desde cero, puedes ejecutar:
+
+  ```bash
+  pipenv run reset_db
+  ```
+  Este comando:
+
+  1. Elimina todas las tablas actuales.
+
+  2. Aplica nuevamente las migraciones.
+
+  3. Deja la base de datos lista para uso.
+
+  ⚠️ Advertencia: Esto eliminará todos los datos existentes. Úsalo con cuidado.
+
+### ✅ Resumen Rápido de Comandos
+
+| Tarea                           | Comando                                      |
+|--------------------------------|----------------------------------------------|
+| Instalar backend               | `pipenv install`                             |
+| Instalar frontend              | `npm install`                                |
+| Ejecutar migraciones           | `pipenv run migrate && pipenv run upgrade`   |
+| Iniciar backend                | `pipenv run start`                           |
+| Iniciar frontend               | `npm run start`                              |
+| Insertar usuarios de prueba    | `flask insert-test-users 5`                  |
+| Insertar datos personalizados  | `pipenv run insert-test-data`                |
+| Resetear base de datos (**Precaución**) | `pipenv run reset_db`               |
+------------------------------------------------
+## ☁️ Despliegue Rápido
+
+Este boilerplate está **100% listo para ser desplegado en [Render.com](https://render.com)** o **[Heroku](https://heroku.com)** en minutos.
+
+📄 **Guía de despliegue:** Documentación oficial (puede ajustarse a documentación propia de Wortec más adelante) [official documentation about it](https://start.4geeksacademy.com/deploy)
+
+---
+
+## 🙌 Contribuidores
+
+Este template fue adaptado y mantenido por el equipo de **Wortec**, una empresa dedicada al desarrollo de soluciones tecnológicas: redes, servidores, desarrollo de software, diseño web, y más.
+
+🌐 Visítanos en: [https://wortec.tech](https://wortec.tech)
+
+Inspirado originalmente en recursos educativos de **4Geeks Academy** y ajustado a las necesidades internas de Wortec.
+
+
+
+
+
+
+
 
 
 # WebApp boilerplate with React JS and Flask API
