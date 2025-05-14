@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import wortecLogo from "/workspaces/WorTec/src/front/img/wortec-only-logo.jpeg";
+import wortecLogo from "/workspaces/WorTec/src/front/img/wortec-only-logo.png";
 import wortecMovil from "/workspaces/WorTec/src/front/img/wortec-logo.png";
 
 export const Navbar = () => {
@@ -17,7 +17,7 @@ export const Navbar = () => {
   const isMobile = windowWidth <= 690;
 
   return (
-    <nav className="fixed top-0 w-full bg-transparent text-white z-50">
+    <nav className="fixed top-0 w-full bg-black text-white z-50">
       {isMobile ? (
         <nav className="fixed top-0 w-full bg-black text-white z-50 shadow-md">
           {/* Encabezado con logo y hamburguesa */}
@@ -79,15 +79,10 @@ export const Navbar = () => {
           )}
         </nav>
       ) : (
-        <div
-          className="relative bg-black 
-        shadow-[inset_4px_4px_8px_rgba(255,255,255,0.15),inset_-4px_-4px_8px_rgba(0,0,0,0.7),0_15px_30px_rgba(0,0,0,0.8)]
-        text-white max-w-6xl w-full mx-auto mt-5 rounded-full py-4 px-10 mb-5 border border-[#222222] overflow-hidden"
-        >
-          <div className="absolute top-0 left-0 w-full h-2/3 rounded-full bg-white/25 blur-lg pointer-events-none"></div>
-
-          <div className="flex items-center justify-b w-full">
-            {/* Logo alineado a la izquierda */}
+        <div className="fixed top-0 left-0 w-screen z-50 bg-gray-800/30 text-white px-6 py-4">
+          {/* Sombra interior opcional si querés mantener efecto visual */}
+          <div className="flex items-center justify-between max-w-7xl mx-auto w-full">
+            {/* Logo */}
             <div className="flex items-center flex-[1.5]">
               <a href="#" className="flex items-center">
                 <img src={wortecLogo} alt="WorTec Logo" className="h-14 mr-3" />
@@ -97,59 +92,31 @@ export const Navbar = () => {
               </a>
             </div>
 
-            {/* Menú centrado */}
+            {/* Menú */}
             <div className="flex justify-center flex-[3]">
               <ul className="flex space-x-10 text-lg font-medium text-white">
-                <li>
-                  <a
-                    href="#"
-                    className="relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300 "
-                  >
-                    Inicio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300"
-                  >
-                    Nosotros
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300"
-                  >
-                    Servicios
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300"
-                  >
-                    Contacto
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="relative  transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300"
-                  >
-                    Blog
-                  </a>
-                </li>
+                {["Inicio", "Nosotros", "Servicios", "Contacto", "Blog"].map(
+                  (item) => (
+                    <li key={item}>
+                      <a
+                        href="#"
+                        className="relative transition-all duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[6px] after:bg-orange-600 after:scale-x-0 hover:after:scale-x-100 after:transition-all after:duration-300"
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
               </ul>
             </div>
 
-            {/* Botón a la derecha */}
+            {/* Botón */}
             <div className="relative flex items-center justify-end flex-[1.5]">
               <button
                 className="bg-orange-400 text-white text-lg font-bold rounded-full px-6 py-2 
-               shadow-md shadow-orange-500/50 hover:shadow-xl hover:shadow-orange-600/40 
-               transition-all duration-300 focus:outline-none border-4 border-orange-500
-               transform hover:scale-105 active:scale-95 active:translate-y-1"
+         shadow-md shadow-orange-500/50 hover:shadow-xl hover:shadow-orange-600/40 
+         transition-all duration-300 focus:outline-none border-4 border-orange-500
+         transform hover:scale-105 active:scale-95 active:translate-y-1"
               >
                 Agendá tu cotización
               </button>
